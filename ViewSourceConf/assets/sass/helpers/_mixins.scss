@@ -1,0 +1,215 @@
+//--------------------------------------------------------------
+// Mixins
+//--------------------------------------------------------------
+
+// REM with PX fallback
+// @include rem(font-size, 16px);
+// @include rem(margin, 10px 5px 5px 10px);
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+	$px : ();
+	$rem: ();
+
+	$root: 10;
+
+	@each $value in $values {
+		@if $value == 0 or $value == auto {
+			$px : append($px , $value);
+			$rem: append($rem, $value);
+		}
+
+		@else if type-of($value) == number {
+			$unit: unit($value);
+			$val: parseInt($value);
+
+			@if $unit == "px" {
+				$px : append($px,  $value);
+				$rem: append($rem, ($val / $root + rem));
+			}
+
+			@if $unit == "rem" {
+				$px : append($px,  ($val * $root + px));
+				$rem: append($rem, $value);
+			}
+		}
+
+		@else {
+			$px : append($px,  $value);
+			$rem: append($rem, $value);
+		}
+	}
+
+	@if $px == $rem {
+		#{$property}: $px;
+	} @else {
+		#{$property}: $px;
+		#{$property}: $rem;
+	}
+}
+
+@function rem($value) {
+	$root: $font-size;
+	$val: parseInt($value);
+	$return: ();
+
+	@if unit($value) == "px" {
+		$return: append($return, ($val / $root + rem));
+	} @else {
+		$return: append($return, ($val * $root + px));
+	}
+
+	@return $return;
+}
+
+@mixin cf() {
+	*zoom: 1;
+
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+// Media Queries
+@mixin bp($point) {
+	@if $point == large-desktop {
+		@media screen and (min-width: 1280px) {
+			@content;
+		}
+	} @else if $point == desktop {
+		@media screen and (min-width: 1140px) {
+			@content;
+		}
+	} @else if $point == small-desktop {
+		@media screen and (min-width: 1024px) {
+			@content;
+		}
+	} @else if $point == nexus {
+		@media screen and (min-width: 900px) {
+			@content;
+		}
+	} @else if $point == large-tablet {
+		@media screen and (min-width: 768px) {
+			@content;
+		}
+	} @else if $point == tablet {
+		@media screen and (min-width: 768px) {
+			@content;
+		}
+	} @else if $point == small-tablet {
+		@media screen and (min-width: 600px) {
+			@content;
+		}
+	} @else if $point == phablet {
+		@media screen and (min-width: 480px) {
+			@content;
+		}
+	} @else if $point == phone {
+		@media screen and (min-width: 320px) {
+			@content;
+		}
+	}
+}
+
+
+// Color
+// -----
+// An easy way to get colors from the $colors map
+// =====
+
+@function color($color, $map: $colors) {
+	@return map-get($map, $color);
+}
+
+// MAP-FETCH
+// ---------
+// An easy way to fetch a deep value in a multi-level map.
+// Works much like map-get() except that you pass multiple
+// keys as the second parameter to go down multiple levels
+// in the nested map.
+//
+// https://gist.github.com/jlong/8760275
+// =========
+
+@function map-fetch($map, $keys) {
+	$key: nth($keys, 1);
+	$length: length($keys);
+	$value: map-get($map, $key);
+	@if $length > 1 {
+		$rest: ();
+		@for $i from 2 through $length {
+			$rest: append($rest, nth($keys, $i));
+		}
+		@return map-fetch($value, $rest);
+	}
+	@else {
+		@return $value;
+	}
+}
+
+// Rem [Function]
+// --------------
+// Converts pixels to rem with $base-font-size
+// or any other font size
+// - https://gist.github.com/ijy/1441967
+@function rem($target, $context: $base-font-size) {
+	@if $target == 0 {
+		@return 0;
+	}
+	@return $target / $context + 0rem;
+}
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}

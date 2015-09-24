@@ -1,0 +1,41 @@
+.session-meta {
+	@include cf();
+
+	.date {
+		background: $lt-grayish-yellow;margin-bottom: 10px;
+		width: 100%;
+		padding: 10px;
+	}
+
+	.date-date {
+		text-transform: uppercase;
+	}
+
+	.time,
+	.speaker {
+		background: $lt-grayish-yellow;
+		width: 49%;
+		display: inline-block;
+		padding: 20px;
+	}
+
+	.time {
+		float: left;
+		margin-right: 2%;
+	}
+	.speaker {
+		float: right;
+	}
+}
+
+.nav-links {
+	.nav-previous,
+	.nav-next {
+		width: 50%;
+		text-transform: uppercase;
+		line-height: 1.4;
+		a {
+			text-decoration: none;
+		}
+	}
+}

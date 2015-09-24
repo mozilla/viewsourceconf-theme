@@ -1,0 +1,39 @@
+$fountain-blue:             #5bc0a4;
+$persian-green:             #00aa86;
+$tory-blue:                 #0b5ca5;
+$chathams-blue:             #1d4388;
+$lt-grayish-yellow:         #f0f0e8;
+
+$black:                     #000;
+$white:                     #fff;
+
+
+$color__background-body: $white;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: $persian-green;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: $black;
+$color__text-input: #666;
+$color__text-input-focus: $black;
+$color__link: $persian-green;
+$color__link-visited: darken($persian-green,10%);
+$color__link-hover: $chathams-blue;
+$color__text-main: $black;
+
+$color__border-button: $persian-green;
+$color__border-button-hover: $persian-green;
+$color__border-button-focus: $persian-green;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+$headings-lt: 'moonlight', sans-serif;
+$headings-b: 'moonbold', sans-serif;
+$font-main: 'montserratlight', sans-serif;
+$font-main-bold: 'montserratbold', sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;

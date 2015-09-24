@@ -1,0 +1,212 @@
+// Fonts
+$sidr-font-family: $font-main;
+$sidr-font-size: 15px;
+
+// Colors
+$sidr-background : $chathams-blue;
+$sidr-background-shadow-color : $fountain-blue;
+$sidr-text-color: $white;
+
+.sidr {
+	/* Default Settings */
+	display: none;
+	position: absolute;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	z-index: 999999;
+	width: 260px;
+	overflow-x: none;
+	overflow-y: auto;
+
+	a {
+		text-decoration: none;
+		color: $white;
+	}
+
+	.sidr-inner {
+		padding: 0 0 15px;
+
+		> p {
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+		a {
+			svg {
+				width: 100%;
+				height: auto;
+				fill: white;
+				padding: 20px;
+			}
+		}
+	}
+
+	&.right {
+		left: auto;
+		right: -260px;
+		width: 260px;
+	}
+
+	&.left {
+		left: -260px;
+		right: auto;
+	}
+
+	/* Theme Settings */
+	font-family: $sidr-font-family;
+	font-size: $sidr-font-size;
+	background: $sidr-background;
+	color: $sidr-text-color;
+
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: normal;
+		padding: 0 15px;
+		margin: 0 0 5px;
+		color: $sidr-text-color;
+	}
+
+	p {
+		margin: 0 0 12px;
+		a {
+			color: rgba($sidr-text-color, .9);
+		}
+	}
+
+	> p {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	ul {
+		display: block;
+		margin: 0;
+		padding: 0;
+		//border-top: 1px solid darken($sidr-background, 10%);
+		//border-bottom: 1px solid lighten($sidr-background, 10%);
+
+		li {
+			display: block;
+			margin: 0;
+			border-top: 1px solid lighten($sidr-background, 10%);
+			border-bottom: 1px solid darken($sidr-background, 10%);
+			width: 100%;
+			line-height: 3;
+
+			&:hover,
+			&.active,
+			&.sidr-class-active {
+				background: darken($sidr-background, 5%);
+
+				> a, > span {
+
+				}
+			}
+
+			a, span {
+				padding: 0 15px;
+				display: block;
+				text-decoration: none;
+				text-align: center;
+				color: $sidr-text-color;
+			}
+
+			ul {
+				border-bottom: none;
+				margin: 0;
+				li {
+					font-size: $sidr-font-size - 2;
+
+					&:last-child {
+						border-bottom: none;
+					}
+
+					&:hover,
+					&.active,
+					&.sidr-class-active {
+						border-top: none;
+
+						> a, > span {
+
+						}
+					}
+
+					a, span {
+						color: rgba($sidr-text-color, .8);
+						padding-left: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	form {
+		margin: 0 15px;
+	}
+
+	label {
+		font-size: $sidr-font-size - 2;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="time"],
+	input[type="url"],
+	textarea, select {
+		width: 100%;
+		font-size: $sidr-font-size - 2;
+		padding: 5px;
+		margin: 0 0 10px;
+		border: none;
+		background: rgba(#000, .1);
+		color: rgba($sidr-text-color, .6);
+		display: block;
+		clear: both;
+	}
+
+	input[type=checkbox] {
+		width: auto;
+		display: inline;
+		clear: none;
+	}
+
+	input[type=button],
+	input[type=submit] {
+		color: $sidr-background;
+		background: $sidr-text-color;
+
+		&:hover {
+			background: rgba($sidr-text-color, .9);
+		}
+	}
+}
+
+.sidr-class-registration-link {
+	background: $persian-green;
+	border-top: 1px solid lighten($persian-green,10%);
+	border-bottom: 1px solid darken($persian-green,10%);
+	display: block !important;
+	text-align: center;
+	padding: 15px;
+
+	&:hover {
+		background: darken($persian-green, 5%);
+	}
+
+	@include bp(large-tablet) {
+		display: inline-block;
+	}
+}
+
+#mobile-navigation {
+	.sidr-class-branding {
+		@include cf();
+		width: 200px;
+	}
+}

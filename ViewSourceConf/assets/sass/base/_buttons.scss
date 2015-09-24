@@ -1,0 +1,46 @@
+
+$box-shadow: 1px 1px 1px rgba(0,0,0,.5);
+$none: none;
+// Buttons
+$button-primary: $persian-green;
+$button-secondary: $chathams-blue;
+$button-tertiary: $lt-grayish-yellow;
+
+$dark-text: $black;
+$white-text: $white;
+
+// ".btn-{modifiername}", background-color, border, color, box-shadow
+$buttons: (
+				("primary", $button-primary, $button-primary, $white-text, $box-shadow),
+				("secondary", $button-secondary, $button-secondary, $white-text, $box-shadow),
+				("tertiary", $button-tertiary, $button-tertiary, $white-text, $box-shadow),
+);
+
+// Generate Button Modifiers
+@each $b in $buttons {
+	.btn.btn-#{nth($b,1)} {
+		background-color: #{nth($b,2)};
+		border-color: #{nth($b,3)};
+		color: #{nth($b,4)};
+		box-shadow: #{nth($b,5)};
+	}
+}
+.btn {
+	@include rem(padding,10px 20px);
+	display: inline-block;
+	border: 1px solid transparent;
+	border-radius: 1px;
+	font-family: $headings-b;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+
+}
+
+a.btn {
+	text-decoration: none;
+}
+
+.buttons {
+	padding: 20px;
+	margin-bottom: 50px;
+}
