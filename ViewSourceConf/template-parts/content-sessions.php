@@ -21,27 +21,22 @@
       $time = 'g:i a';
       ?>
       <?php setup_postdata( $post );?>
-      <ul>
-        <li class="time">
-          <time>
-            <?php echo date ( $time, $datetime ); ?><br>
-          </time>
-          <span>
-            <?php the_field( 'vs_session_date' ); ?><br>
-          </span>
-        </li>
-        <li class="featured-image">
+      <div class="session">
+        <time class="time">
+          <?php echo date ( $time, $datetime ); ?><br>
+        </time>
+        <span class="date">
+          <?php the_field( 'vs_session_date' ); ?><br>
+        </span>
+        <span class="featured-image">
           <?php echo get_the_post_thumbnail( $post->ID );?>
-        </li>
-        <li class="session-info">
-          <span class="session-title"><?php echo get_the_title ( $post->ID ); ?></span>
-          <span class="session-speaker"><?php echo get_the_title ( $speaker[ 0 ] ); ?></span>
+        </span>
+        <div class="session-info">
+          <h3 class="session-title"><?php echo get_the_title ( $post->ID ); ?></h3>
+          <h4 class="session-speaker"><?php echo get_the_title ( $speaker[ 0 ] ); ?></h4>
           <span class="speaker-company"><?php the_field ( 'company', $speaker[ 0 ] ); ?></span>
-        </li>
-        <li>
-          <a href="<?php the_permalink(); ?>"><i class="fa fa-plus"></i></a>
-        </li>
-      </ul>
+        </div>
+      </div>
     <?php endforeach; ?>
 
     <?php wp_reset_postdata(); ?>

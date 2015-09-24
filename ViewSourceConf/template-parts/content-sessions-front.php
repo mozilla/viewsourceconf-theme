@@ -15,28 +15,21 @@
       $datetime = get_field ( 'vs_session_date', $post->ID );
       $time     = 'g:i a';
       ?>
-      <ul>
-        <li class="time">
-          <time>
-            <?php echo $datetime; ?>
-          </time>
-        </li>
-        <li class="session-info">
-          <h4>
-            <a href="<?php the_permalink (); ?>"><?php echo get_the_title ( $post->ID ); ?></a>
-          </h4>
-          <?php
-            $speaker = get_post_meta( $post->ID, 'vs_session_speaker', true ); if( $speaker ) :
-            echo '<p class="speaker-name">' . get_the_title( $speaker[0] ) . '</p>'; endif;
+      <div class="session">
+        <time class="time"><?php echo $datetime; ?></time>
+        <div class="session-info">
+          <a href="<?php the_permalink (); ?>">
+            <h4 class="session-title"><?php echo get_the_title ( $post->ID ); ?></h4>
+            <?php
+              $speaker = get_post_meta( $post->ID, 'vs_session_speaker', true ); if( $speaker ) :
+              echo '<p class="speaker-name">' . get_the_title( $speaker[0] ) . '</p>'; endif;
 
-            $speaker_company = get_post_meta( $speaker[0], 'company', true ); if( $speaker_company ) :
-            echo '<p class="company">' . $speaker_company . '</p>'; endif;
-          ?>
-        </li>
-        <li>
-          <a href="<?php the_permalink (); ?>"><i class="fa fa-plus"></i></a>
-        </li>
-      </ul>
+              $speaker_company = get_post_meta( $speaker[0], 'company', true ); if( $speaker_company ) :
+              echo '<p class="company">' . $speaker_company . '</p>'; endif;
+            ?>
+          </a>
+        </div>
+      </div>
     <?php endforeach; ?>
     <!--<a class="btn btn-primary" href="/schedule">See Full Schedule</a>-->
     <?php wp_reset_postdata (); ?>

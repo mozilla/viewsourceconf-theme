@@ -5,8 +5,8 @@
     </a>
   </div>
   <nav id="site-navigation" class="main-navigation dark" role="navigation">
-    <?php view_source_registration_link();?>
     <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+    <?php view_source_registration_link();?>
   </nav>
 </div>
 <hr>

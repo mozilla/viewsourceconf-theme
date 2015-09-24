@@ -19,7 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 30px;
     text-transform: uppercase;
-
 }
 
 h2 {
@@ -48,14 +47,6 @@ blockquote {
     margin: 20px;
     padding-left: 35px;
     position: relative;
-
-    &:before {
-        font-family: "Fontawesome";
-        font-size: 30px;
-        content: '\f10d';
-        position: absolute;
-        left: 0;
-    }
 }
 
 address {

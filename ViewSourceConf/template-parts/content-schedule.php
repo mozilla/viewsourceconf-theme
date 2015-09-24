@@ -49,7 +49,6 @@
 
         if( '' != $speaker ) :
           echo '<a href="' . get_permalink( $speaker ) . '">';
-          echo '<i class="fa fa-plus"></i>';
           echo '<div class="speaker">' . get_the_title( $speaker ) . '</div>';
           echo '</a>';
         endif;
@@ -125,7 +124,6 @@
 
         if( '' != $speaker ) :
           echo '<a href="' . get_permalink( $speaker ) . '">';
-          echo '<i class="fa fa-plus"></i>';
           echo '<div class="speaker">' . get_the_title( $speaker ) . '</div>';
           echo '</a>';
         endif;
@@ -201,7 +199,6 @@
 
         if( '' != $speaker ) :
           echo '<a href="' . get_permalink( $speaker ) . '">';
-          echo '<i class="fa fa-plus"></i>';
           echo '<div class="speaker">' . get_the_title( $speaker ) . '</div>';
           echo '</a>';
         endif;

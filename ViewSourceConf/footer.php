@@ -19,12 +19,29 @@
       </div>
     </footer><!-- #colophon -->
   </div><!-- #page -->
-<?php get_template_part( 'template-parts/content', 'sidr' );?>
-<div id="dragon">
-  <i id="thar-she-goes" class="fa fa-times-circle"></i>
-  <img src="<?php echo get_template_directory_uri();?>/images/mozilla-dragon.png">
-</div>
-<?php wp_footer(); ?>
+
+  <?php get_template_part( 'template-parts/content', 'sidr' );?>
+
+  <div id="dragon">
+    <button type="button" id="thar-she-goes"><?php _e('Close', 'view_source') ?></button>
+    <pre>
+             _.-~-.
+           7''  Q..\
+        _7         (_
+      _7  _/    _q.  /
+    _7 . ___  /VVvv-'_                                            .
+   7/ / /~- \_\\      '-._     .-'                      /       //
+  ./ ( /-~-/||'=.__  '::. '-~'' {             ___   /  //     ./{
+ V   V-~-~| ||   __''_   ':::.   ''~-~.___.-'' _/  // / {_   /  {  /
+  VV/-~-~-|/ \ .'__'. '.    '::                     _ _ _        ''.
+  / /~~~~||VVV/ /  \ )  \        _ __ ___   ___ ___(_) | | __ _   .::'
+ / (~-~-~\\.-' /    \'   \::::. | '_ ` _ \ / _ \_  / | | |/ _` | :::'
+/..\    /..\__/      '     '::: | | | | | | (_) / /| | | | (_| | ::'
+vVVv    vVVv                 ': |_| |_| |_|\___/___|_|_|_|\__,_| ''
+    </pre>
+  </div>
+
+  <?php wp_footer(); ?>
 
   </body>
 </html>

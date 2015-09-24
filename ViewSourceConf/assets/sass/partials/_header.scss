@@ -4,6 +4,11 @@
         z-index: 2;
     }
 
+    .date,
+    .description {
+        z-index: 2;
+    }
+
     .logo {
         width: 200px;
         position: absolute;
@@ -26,23 +31,57 @@
     }
 
     .main-navigation {
-        width: 50%;
+        width: 70%;
         float: right;
-        padding: 40px 60px 0 0;
-
-
+        padding: 40px 0 0;
     }
 
     .menu-toggle {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        text-indent: 210%;
+        overflow: hidden;
+        color: $white;
+
+        &:focus,
+        &:active {
+            outline: 0;
+            color: transparentize($white, .2);
+        }
+
+        &:before {
+            content: '\f0c9';
+            font-family: 'vs-icons';
+            width: 40px;
+            height: 40px;
+            font-size: 2em;
+            text-align: center;
+            text-indent: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     }
 
-    .fa {
+    .date {
+        font-size: 20px;
         color: $white;
-        line-height: 2;
-        padding: 0 10px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
+        width: 100%;
+        top: 20%;
+
+        @include bp(large-tablet) {
+            font-size: 32px;
+            top: 18%;
+        }
     }
 
     h2.description {
@@ -103,13 +142,19 @@ nav {
         position: relative;
         z-index: 10;
     }
+
     .main-navigation {
         a {
             @include bp(large-tablet) {
                 color: $black;
             }
         }
+
+        .registration-link {
+            color: $white;
+        }
     }
+
     .dark {
         a {
             color: $white;
@@ -118,8 +163,15 @@ nav {
             }
         }
     }
+
     .menu-toggle {
         color: $black;
+
+        &:focus,
+        &:active {
+            outline: 0;
+            color: $fountain-blue;
+        }
     }
 }
 
@@ -129,16 +181,54 @@ nav {
 
         @include bp(large-tablet) {
             display: block;
-            position: absolute;
             margin: 0;
             padding: 0;
-            top: 36px;
-            right: 0;
+            float: right;
         }
+
         li {
             list-style: none;
-            float: left;
             display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            display: inline-block;
+            height: 2em;
+            margin: 0 5px;
+            overflow: hidden;
+            position: relative;
+            text-indent: 210%;
+            width: 30px;
+
+            &:before {
+                color: $white;
+                font-family: 'vs-icons';
+                left: 0;
+                line-height: 2;
+                position: absolute;
+                text-align: center;
+                text-indent: 0;
+                top: 0;
+                width: 30px;
+                transition: background-color .15s ease;
+            }
+
+            &.twitter:before {
+                content: '\f099';
+            }
+
+            &.facebook:before {
+                content: '\f09a';
+            }
+
+            &:hover:before,
+            &:focus:before,
+            &:active:before {
+                background: lighten($chathams-blue, 5%);
+                background: transparentize(lighten($chathams-blue, 20%), 0.75);
+            }
         }
     }
 }

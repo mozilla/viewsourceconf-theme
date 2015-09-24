@@ -1,6 +1,6 @@
-
 $box-shadow: 1px 1px 1px rgba(0,0,0,.5);
 $none: none;
+
 // Buttons
 $button-primary: $persian-green;
 $button-secondary: $chathams-blue;
@@ -23,8 +23,10 @@ $buttons: (
         border-color: #{nth($b,3)};
         color: #{nth($b,4)};
         box-shadow: #{nth($b,5)};
+        transition: background-color .15s ease;
     }
 }
+
 .btn {
     @include rem(padding,10px 20px);
     display: inline-block;
@@ -33,11 +35,16 @@ $buttons: (
     font-family: $headings-b;
     margin-bottom: 10px;
     text-transform: uppercase;
-
 }
 
 a.btn {
     text-decoration: none;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active {
+    background-color: lighten($persian-green, 3%);
 }
 
 .buttons {

@@ -21,10 +21,12 @@
       $speaker_session = esc_html( get_post_meta( $speaker->ID, 'view_source_speaker_session', true ) );
 
       echo '<li class="speaker">';
-      echo '<a href="#' . $speaker->ID . '"><i class="fa fa-plus"></i></a>';
-      echo '<span class="speaker-info">';
-      echo '<a class="speaker-name" href="#' . $speaker->ID . '">' . $speaker->post_title . '</a>';
-      echo '<span class="company">' . get_the_title( $speaker_session ) . '</span>';
+      echo '  <a href="#' . $speaker->ID . '">';
+      echo '    <div class="speaker-info">';
+      echo '      <h3 class="speaker-name" href="#' . $speaker->ID . '">' . $speaker->post_title . '</h3>';
+      echo '      <span class="desc">' . get_the_title( $speaker_session ) . '</span>';
+      echo '    </div>';
+      echo '  </a>';
       echo '</li>';
     }
   ?>
