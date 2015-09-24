@@ -1,162 +1,162 @@
 #schedule.schedule-inner {
-	margin-bottom: 60px;
-	@include cf();
-	ul.header {
-		font-family: $headings-lt;
-		text-transform: uppercase;
-	}
-	ul {
-		@include cf();
-		background: $lt-grayish-yellow;
-		list-style-type: none;
-		margin: 0 0 10px 0;
-		padding: 0;
-		li {
-			display: inline-block;
-			float: left;
-			position: relative;
-		}
+    margin-bottom: 60px;
+    @include cf();
+    ul.header {
+        font-family: $headings-lt;
+        text-transform: uppercase;
+    }
+    ul {
+        @include cf();
+        background: $lt-grayish-yellow;
+        list-style-type: none;
+        margin: 0 0 10px 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            float: left;
+            position: relative;
+        }
 
-		.time {
-			font-family: $font-main;
-			width: 50%;
-			padding: 30px 0 0 30px;
+        .time {
+            font-family: $font-main;
+            width: 50%;
+            padding: 30px 0 0 30px;
 
-			@include bp(large-tablet) {
-				padding-top: 30px;
-				width: 20%;
-			}
-		}
+            @include bp(large-tablet) {
+                padding-top: 30px;
+                width: 20%;
+            }
+        }
 
-		.featured-image {
-			width: 50%;
+        .featured-image {
+            width: 50%;
 
-			@include bp(large-tablet) {
-				width: 15%;
-			}
+            @include bp(large-tablet) {
+                width: 15%;
+            }
 
-			img {
-				width: 100%;
-				height: auto;
-			}
-		}
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
 
-		.session-info {
-			//width: 60%;
-			padding: 30px;
-			margin-left: 15%;
+        .session-info {
+            //width: 60%;
+            padding: 30px;
+            margin-left: 15%;
 
-			p.speaker-name {
-				margin-bottom: 0;
-			}
+            p.speaker-name {
+                margin-bottom: 0;
+            }
 
-			.company {
-				@include cf();
-				font-size: 10px;
-				text-transform: uppercase;
-			}
-		}
+            .company {
+                @include cf();
+                font-size: 10px;
+                text-transform: uppercase;
+            }
+        }
 
-		.fa {
-			display: none;
-			@include bp(large-tablet) {
-				display: block;
-				padding-top: 15px;
-				width: 5%;
-			}
-		}
+        .fa {
+            display: none;
+            @include bp(large-tablet) {
+                display: block;
+                padding-top: 15px;
+                width: 5%;
+            }
+        }
 
-		a {
-			text-decoration: none;
-		}
-	}
+        a {
+            text-decoration: none;
+        }
+    }
 
-	.date {
-		margin-bottom: 10px;
-		padding: 10px;
-	}
+    .date {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
 
-	.session-title,
-	.speaker-company {
-		display: block;
-	}
-	.session-info {
-		a {
-			font-size: 18px;
-			font-family: $headings-b;
-			margin-bottom: 10px;
-		}
+    .session-title,
+    .speaker-company {
+        display: block;
+    }
+    .session-info {
+        a {
+            font-size: 18px;
+            font-family: $headings-b;
+            margin-bottom: 10px;
+        }
 
-	}
-	.speaker-company {
-		font-size: 12px;
-	}
-	ul.day,
-	ul.header {
-		li {
-			width: 50%;
-			float: left;
-			display: inline-block;
-			padding: 10px 30px;
+    }
+    .speaker-company {
+        font-size: 12px;
+    }
+    ul.day,
+    ul.header {
+        li {
+            width: 50%;
+            float: left;
+            display: inline-block;
+            padding: 10px 30px;
 
-			&:first-child {
-				//width: 35%;
-			}
-		}
-	}
+            &:first-child {
+                //width: 35%;
+            }
+        }
+    }
 
-	//ul {
-	//	@include cf();
-	//	position: relative;
+    //ul {
+    //  @include cf();
+    //  position: relative;
 
-		//.time {
-		//	position: absolute;
-		//	top: 30px;
-		//	left: 15px;
-		//	text-align: left;
-		//	width: 40%;
-		//	padding: 0;
-		//
-		//	@include bp(large-tablet) {
-		//		text-align: left;
-		//	}
-		//}
+        //.time {
+        //  position: absolute;
+        //  top: 30px;
+        //  left: 15px;
+        //  text-align: left;
+        //  width: 40%;
+        //  padding: 0;
+        //
+        //  @include bp(large-tablet) {
+        //      text-align: left;
+        //  }
+        //}
 
-		//.featured-image {
-		//	width: 50%;
-		//	float: right;
-		//
-		//	@include bp(large-table) {
-		//		width: auto;
-		//		height: auto;
-		//	}
-		//}
-		//
-		//.session-info {
-		//	position: absolute;
-		//	top: 60px;
-		//	left: 15px;
-		//	width: 40%;
-		//	padding: 0;
-		//	margin-bottom: 20px;
-		//
-		//	@include bp(large-tablet) {
-		//		width: 60%;
-		//	}
-		//}
-	//}
+        //.featured-image {
+        //  width: 50%;
+        //  float: right;
+        //
+        //  @include bp(large-table) {
+        //      width: auto;
+        //      height: auto;
+        //  }
+        //}
+        //
+        //.session-info {
+        //  position: absolute;
+        //  top: 60px;
+        //  left: 15px;
+        //  width: 40%;
+        //  padding: 0;
+        //  margin-bottom: 20px;
+        //
+        //  @include bp(large-tablet) {
+        //      width: 60%;
+        //  }
+        //}
+    //}
 
-	//ul.single-session {
-	//	min-height: 240px;
-	//}
+    //ul.single-session {
+    //  min-height: 240px;
+    //}
 
-	ul.day {
-		background: transparent;
-		margin-top: 60px;
-		li {
-			font-family: $headings-b;
-			font-size: 18px;
-			text-transform: uppercase;
-		}
-	}
+    ul.day {
+        background: transparent;
+        margin-top: 60px;
+        li {
+            font-family: $headings-b;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+    }
 }

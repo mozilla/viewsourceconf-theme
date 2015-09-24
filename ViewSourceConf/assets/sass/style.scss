@@ -5,13 +5,13 @@ Author: Trisha Salas
 Author URI: http://www.codebrainmedia.com
 Description:
 Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: Mozilla Public License v. 2.0 or later
+License URI: https://www.mozilla.org/MPL/2.0/
 Text Domain: viewsource
 Tags:
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+This software is licensed under the MPL/GPL/LGPL tri-license.
+https://www.mozilla.org/MPL/2.0/
 */
 
 @import "helpers/helpers";
@@ -26,25 +26,25 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "media/media";
 
 .main-navigation {
-	.registration-link {
-		right: 150px; // change this value to 260px when the schedule link is added back in
-		bottom: -4px;
-	}
+    .registration-link {
+        right: 150px; // change this value to 260px when the schedule link is added back in
+        bottom: -4px;
+    }
 }
 
 #page-header {
-	.main-navigation {
-		a.registration-link {
-			color: $white;
-			bottom: 24px;
-			right: 100px; // change this value to 200px when the schedule link is added back in
-		}
-	}
+    .main-navigation {
+        a.registration-link {
+            color: $white;
+            bottom: 24px;
+            right: 100px; // change this value to 200px when the schedule link is added back in
+        }
+    }
 }
 
 #page-header-front-page {
-	a.registration-link {
-		color: $white;
-		right: 100px; // change this value to 200px when the schedule link is added back in
-	}
+    a.registration-link {
+        color: $white;
+        right: 100px; // change this value to 200px when the schedule link is added back in
+    }
 }

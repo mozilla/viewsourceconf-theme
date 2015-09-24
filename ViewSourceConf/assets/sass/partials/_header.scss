@@ -1,150 +1,150 @@
 .site-header {
-	.header-top {
-		@include cf();
-		z-index: 2;
-	}
+    .header-top {
+        @include cf();
+        z-index: 2;
+    }
 
-	.logo {
-		width: 200px;
-		position: absolute;
-		top: 15px;
-		left: 15px;
+    .logo {
+        width: 200px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
 
-		@include bp(large-tablet) {
-			width: 243px;
-			display: inline-block;
-			left: 0;
-			padding-top: 30px;
-			position: relative;
-			transform: none;
-		}
-		svg {
-			path {
-				fill: $white;
-			}
-		}
-	}
+        @include bp(large-tablet) {
+            width: 243px;
+            display: inline-block;
+            left: 0;
+            padding-top: 30px;
+            position: relative;
+            transform: none;
+        }
+        svg {
+            path {
+                fill: $white;
+            }
+        }
+    }
 
-	.main-navigation {
-		width: 50%;
-		float: right;
-		padding: 40px 60px 0 0;
+    .main-navigation {
+        width: 50%;
+        float: right;
+        padding: 40px 60px 0 0;
 
 
-	}
+    }
 
-	.menu-toggle {
-		position: absolute;
-		top: 0;
-		right: 0;
-	}
+    .menu-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 
-	.fa {
-		color: $white;
-		line-height: 2;
-		padding: 0 10px;
-	}
+    .fa {
+        color: $white;
+        line-height: 2;
+        padding: 0 10px;
+    }
 
-	h2.description {
-		font-family: $headings-lt;
-		color: $white;
-		letter-spacing: 1px;
-		text-align: center;
-		font-size: 35px;
-		line-height: 1.2;
-		padding: 0 15px;
-		position: absolute;
-		top: 28%;
-		z-index: 1;
+    h2.description {
+        font-family: $headings-lt;
+        color: $white;
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 35px;
+        line-height: 1.2;
+        padding: 0 15px;
+        position: absolute;
+        top: 28%;
+        z-index: 1;
 
-		@include bp(large-tablet) {
-			font-size: 60px;
-			left: 50%;
-			transform: translateX(-50%);
-		}
+        @include bp(large-tablet) {
+            font-size: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-		.word1,
-		.word2,
-		.word3 {
-			letter-spacing: 3px;
-		}
+        .word1,
+        .word2,
+        .word3 {
+            letter-spacing: 3px;
+        }
 
-		.word3 {
-			&:after {
+        .word3 {
+            &:after {
 
-				@include bp(large-tablet) {
-					content: '';
-					display: table;
-				}
-			}
-		}
+                @include bp(large-tablet) {
+                    content: '';
+                    display: table;
+                }
+            }
+        }
 
-		.word5 {
-			&:after {
-				@include bp(large-tablet) {
-					content: '';
-					display: table;
-				}
-			}
-		}
+        .word5 {
+            &:after {
+                @include bp(large-tablet) {
+                    content: '';
+                    display: table;
+                }
+            }
+        }
 
-	}
+    }
 }
 
 nav {
-	.menu {
-		display: inline-block;
-		float: right;
-	}
+    .menu {
+        display: inline-block;
+        float: right;
+    }
 }
 
 #page-header {
-	.branding {
-		position: relative;
-		z-index: 10;
-	}
-	.main-navigation {
-		a {
-			@include bp(large-tablet) {
-				color: $black;
-			}
-		}
-	}
-	.dark {
-		a {
-			color: $white;
-			@include bp(large-tablet) {
-				color: $black;
-			}
-		}
-	}
-	.menu-toggle {
-		color: $black;
-	}
+    .branding {
+        position: relative;
+        z-index: 10;
+    }
+    .main-navigation {
+        a {
+            @include bp(large-tablet) {
+                color: $black;
+            }
+        }
+    }
+    .dark {
+        a {
+            color: $white;
+            @include bp(large-tablet) {
+                color: $black;
+            }
+        }
+    }
+    .menu-toggle {
+        color: $black;
+    }
 }
 
 #masthead {
-	.social-media {
-		display: none;
+    .social-media {
+        display: none;
 
-		@include bp(large-tablet) {
-			display: block;
-			position: absolute;
-			margin: 0;
-			padding: 0;
-			top: 36px;
-			right: 0;
-		}
-		li {
-			list-style: none;
-			float: left;
-			display: inline-block;
-		}
-	}
+        @include bp(large-tablet) {
+            display: block;
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 36px;
+            right: 0;
+        }
+        li {
+            list-style: none;
+            float: left;
+            display: inline-block;
+        }
+    }
 }
 
 .main {
-	max-width: 900px;
-	width: 100%;
-	margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
 }

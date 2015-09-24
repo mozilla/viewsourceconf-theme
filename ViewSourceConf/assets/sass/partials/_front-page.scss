@@ -1,488 +1,488 @@
 section {
-	padding: 30px 0;
+    padding: 30px 0;
 
-	h2,
-	h3,
-	h4 {
-		font-family: $headings-lt;
-		padding: 0 15px;
-		margin-bottom: 10px;
-	}
+    h2,
+    h3,
+    h4 {
+        font-family: $headings-lt;
+        padding: 0 15px;
+        margin-bottom: 10px;
+    }
 
-	h2 {
-		@include rem(font-size, 24px);
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		margin-bottom: 20px;
-	}
+    h2 {
+        @include rem(font-size, 24px);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
 
-	h3 {
-		font-size: 20px;
-	}
+    h3 {
+        font-size: 20px;
+    }
 
-	h4 {
-		font-size: 18px;
-	}
+    h4 {
+        font-size: 18px;
+    }
 
-	p {
-		line-height: 1.6;
-		margin-bottom: 40px;
-		padding: 0 15px;
-		font-family: $font-main;
-	}
+    p {
+        line-height: 1.6;
+        margin-bottom: 40px;
+        padding: 0 15px;
+        font-family: $font-main;
+    }
 
-	span {
-		font-family: $headings-lt;
-	}
+    span {
+        font-family: $headings-lt;
+    }
 }
 
 #page-header,
 #page-header-front-page {
-	position: relative;
-	padding-bottom: 0;
-	background: $white;
-	width: 100%;
-	z-index: 100;
-	.menu-toggle {
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
+    position: relative;
+    padding-bottom: 0;
+    background: $white;
+    width: 100%;
+    z-index: 100;
+    .menu-toggle {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 .page-header {
 
-	.branding {
-		width: 242px;
-		height: auto;
-		display: block;
-		margin: 0 auto;
-		padding-bottom: 10px;
+    .branding {
+        width: 242px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 10px;
 
-		@include bp(large-tablet) {
-			display: inline-block;
-			float: left;
-		}
-		svg {
-			path {
-				fill: $black;
-			}
-		}
-	}
-	nav {
-		margin-bottom: 60px;
-	}
+        @include bp(large-tablet) {
+            display: inline-block;
+            float: left;
+        }
+        svg {
+            path {
+                fill: $black;
+            }
+        }
+    }
+    nav {
+        margin-bottom: 60px;
+    }
 }
 
 
 hr {
-	position: relative;
-	width: 90%;
-	height: 20px;
-	border: 0;
-	margin: 0 auto;
-	overflow: hidden;
+    position: relative;
+    width: 90%;
+    height: 20px;
+    border: 0;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 hr::before {
-	content: "";
-	position: absolute;
-	top: -25px;
-	left: 0;
-	width: 100%;
-	height: 25px;
-	z-index: 50;
-	border-radius: 0 0 100% 100% / 0 0 150% 150%;
-	box-shadow: 0 0 20px 7px rgba(0,0,0,0.15), 0 0 10px 3px rgba(0,0,0,0.35);
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    z-index: 50;
+    border-radius: 0 0 100% 100% / 0 0 150% 150%;
+    box-shadow: 0 0 20px 7px rgba(0,0,0,0.15), 0 0 10px 3px rgba(0,0,0,0.35);
 }
 
 .registration {
-	padding-bottom: 60px;
-	ul {
-		margin: 0 auto;
-		padding: 0;
+    padding-bottom: 60px;
+    ul {
+        margin: 0 auto;
+        padding: 0;
 
-		@include bp(large-tablet) {
-			width: 98%;
-		}
-		li {
-			background: $lt-grayish-yellow;
-			display:inline-block;
-			list-style-type: none;
-			margin-bottom: 10px;
-			padding: 25px;
-			width: 100%;
+        @include bp(large-tablet) {
+            width: 98%;
+        }
+        li {
+            background: $lt-grayish-yellow;
+            display:inline-block;
+            list-style-type: none;
+            margin-bottom: 10px;
+            padding: 25px;
+            width: 100%;
 
-			@include bp(large-tablet) {
-				width: 48%;
-			}
+            @include bp(large-tablet) {
+                width: 48%;
+            }
 
-			&:first-child {
-				@include bp(large-tablet) {
-					margin-right: 2%;
-				}
-			}
+            &:first-child {
+                @include bp(large-tablet) {
+                    margin-right: 2%;
+                }
+            }
 
-			h2 {
-				font-size: 11px;
-				font-family: $font-main-bold;
-				line-height: 1.2;
-				margin-bottom: 20px;
-			}
-			.cost {
-				font-size: 15px;
-				font-family: $font-main-bold;
-			}
-		}
-	}
+            h2 {
+                font-size: 11px;
+                font-family: $font-main-bold;
+                line-height: 1.2;
+                margin-bottom: 20px;
+            }
+            .cost {
+                font-size: 15px;
+                font-family: $font-main-bold;
+            }
+        }
+    }
 }
 
 .speakers {
-	ul {
-		@include cf();
-		list-style-type: none;
-		margin: 0 auto;
-		padding: 0;
-		width: 100%;
+    ul {
+        @include cf();
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
 
-		@include bp(large-tablet) {
-			width: 90%;
-		}
+        @include bp(large-tablet) {
+            width: 90%;
+        }
 
-		li {
-			width: 46%;
-			float: left;
-			display: inline-block;
-			border: 3px solid $lt-grayish-yellow;
-			height: 190px;
-			position: relative;
-			margin: 5px;
+        li {
+            width: 46%;
+            float: left;
+            display: inline-block;
+            border: 3px solid $lt-grayish-yellow;
+            height: 190px;
+            position: relative;
+            margin: 5px;
 
-			&:hover {
-				a {
-					color: $white;
-				}
-			}
+            &:hover {
+                a {
+                    color: $white;
+                }
+            }
 
-			@include bp(large-tablet) {
-				@include gallery(3 of 12);
-			}
+            @include bp(large-tablet) {
+                @include gallery(3 of 12);
+            }
 
-			a {
-				color: $black;
-			}
+            a {
+                color: $black;
+            }
 
-			.fa {
-				color: $persian-green;
-				position: absolute;
-				top: 5px;
-				right: 5px;
-			}
+            .fa {
+                color: $persian-green;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+            }
 
-			.company {
-				@include cf();
-				font-size: 10px;
-				font-family: $font-main;
-				text-transform: uppercase;
-			}
+            .company {
+                @include cf();
+                font-size: 10px;
+                font-family: $font-main;
+                text-transform: uppercase;
+            }
 
-			&:hover {
-				background: $persian-green;
-				border-color: $persian-green;
+            &:hover {
+                background: $persian-green;
+                border-color: $persian-green;
 
-				.fa {
-					color: $white;
-				}
+                .fa {
+                    color: $white;
+                }
 
-				a {
-					color: $white;
-				}
-				.company {
-					color: $white;
-				}
-			}
+                a {
+                    color: $white;
+                }
+                .company {
+                    color: $white;
+                }
+            }
 
-			a {
-				text-decoration: none;
-			}
+            a {
+                text-decoration: none;
+            }
 
-			&:hover {
-				.speaker-info {
-					a.speaker-name {
-						color: $white;
-					}
-				}
-			}
-			.speaker-info {
-				position: absolute;
-				bottom: 10px;
-				left: 10px;
+            &:hover {
+                .speaker-info {
+                    a.speaker-name {
+                        color: $white;
+                    }
+                }
+            }
+            .speaker-info {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
 
-				a.speaker-name {
-					color: #111;
-					font-family: $font-main-bold;
-					text-transform: uppercase;
-					line-height: 1.4;
+                a.speaker-name {
+                    color: #111;
+                    font-family: $font-main-bold;
+                    text-transform: uppercase;
+                    line-height: 1.4;
 
-					.word1,
-					.word2,
-					.word3,
-					.word4 {
-						font-family: $font-main-bold;
-					}
+                    .word1,
+                    .word2,
+                    .word3,
+                    .word4 {
+                        font-family: $font-main-bold;
+                    }
 
-					.word2,
-					.word3 {
-						display: block;
+                    .word2,
+                    .word3 {
+                        display: block;
 
-						&:before,
-						&:after {
-							@include cf();
-						}
-					}
-				}
-			}
-		}
-	}
+                        &:before,
+                        &:after {
+                            @include cf();
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // modal
 
 .remodal {
 
-	h4 {
-		font-family: $font-main-bold;
-		font-size: 15px;
-		line-height: 1.2;
-		text-align: left;
-		text-transform: uppercase;
-	}
+    h4 {
+        font-family: $font-main-bold;
+        font-size: 15px;
+        line-height: 1.2;
+        text-align: left;
+        text-transform: uppercase;
+    }
 
-	h5 {
-		font-family: $font-main-bold;
-		font-size: 11px;
-		line-height: 1.4;
-		text-align: left;
-		text-transform: uppercase;
-		margin-bottom: 10px;
-	}
+    h5 {
+        font-family: $font-main-bold;
+        font-size: 11px;
+        line-height: 1.4;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
 
-	p {
-		font-size: 12px;
-		text-align: left;
-		margin-bottom: 10px;
+    p {
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 10px;
 
-		a {
-			text-decoration: none;
-		}
-	}
+        a {
+            text-decoration: none;
+        }
+    }
 
-	small {
-		font-size: 10px;
-		text-align: left;
-	}
+    small {
+        font-size: 10px;
+        text-align: left;
+    }
 
-	img {
-		float: left;
-		margin-bottom: 10px;
-	}
+    img {
+        float: left;
+        margin-bottom: 10px;
+    }
 
-	.fa {
-		color: #00a7e0;
-	}
-	.left,
-	.right {
-		display: block;
-		width: 100%;
-		margin-left: 1%;
+    .fa {
+        color: #00a7e0;
+    }
+    .left,
+    .right {
+        display: block;
+        width: 100%;
+        margin-left: 1%;
 
-		@include bp(large-tablet) {
-			display: inline-block;
-			width: 48%;
-		}
-	}
-	.left {
-		margin-right: 2%;
+        @include bp(large-tablet) {
+            display: inline-block;
+            width: 48%;
+        }
+    }
+    .left {
+        margin-right: 2%;
 
-		img {
-			width: 100%;
-			height: auto;
-		}
+        img {
+            width: 100%;
+            height: auto;
+        }
 
-		@include bp(large-tablet) {
-			float: left;
-		}
-	}
-	.right {
+        @include bp(large-tablet) {
+            float: left;
+        }
+    }
+    .right {
 
-		@include bp(large-tablet) {
-			float: right;
-		}
-	}
+        @include bp(large-tablet) {
+            float: right;
+        }
+    }
 }
 
 .schedule.schedule-front {
-	margin-bottom: 30px;
-	@include cf();
-	ul.header {
-		font-family: $headings-lt;
-		text-transform: uppercase;
-	}
-	ul {
-		@include cf();
-		background: $lt-grayish-yellow;
-		list-style-type: none;
-		margin: 0 0 10px 0;
-		padding: 20px 10px;
-		li {
-			display: inline-block;
-			float: left;
-			position: relative;
-		}
+    margin-bottom: 30px;
+    @include cf();
+    ul.header {
+        font-family: $headings-lt;
+        text-transform: uppercase;
+    }
+    ul {
+        @include cf();
+        background: $lt-grayish-yellow;
+        list-style-type: none;
+        margin: 0 0 10px 0;
+        padding: 20px 10px;
+        li {
+            display: inline-block;
+            float: left;
+            position: relative;
+        }
 
-		.time {
-			font-family: $font-main;
-			width: 50%;
-			text-align: center;
-			padding-top: 30px;
+        .time {
+            font-family: $font-main;
+            width: 50%;
+            text-align: center;
+            padding-top: 30px;
 
-			@include bp(large-tablet) {
-				padding-top: 10px;
-				width: 20%;
-			}
-		}
+            @include bp(large-tablet) {
+                padding-top: 10px;
+                width: 20%;
+            }
+        }
 
-		.featured-image {
-			width: 50%;
+        .featured-image {
+            width: 50%;
 
-			@include bp(large-tablet) {
-				width: 15%;
-			}
+            @include bp(large-tablet) {
+                width: 15%;
+            }
 
-			img {
-				width: 100%;
-				height: auto;
-			}
-		}
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
 
-		.session-info {
-				width: 60%;
-				padding-top: 10px;
-				//padding-left: 30px;
+        .session-info {
+                width: 60%;
+                padding-top: 10px;
+                //padding-left: 30px;
 
 
-			p.speaker-name {
-				margin-bottom: 0;
-			}
+            p.speaker-name {
+                margin-bottom: 0;
+            }
 
-			.company {
-				@include cf();
-				font-size: 10px;
-				text-transform: uppercase;
-			}
-		}
+            .company {
+                @include cf();
+                font-size: 10px;
+                text-transform: uppercase;
+            }
+        }
 
-		.fa {
-			display: none;
-			@include bp(large-tablet) {
-				display: block;
-				padding-top: 15px;
-				width: 5%;
-			}
-		}
+        .fa {
+            display: none;
+            @include bp(large-tablet) {
+                display: block;
+                padding-top: 15px;
+                width: 5%;
+            }
+        }
 
-		a {
-			text-decoration: none;
-		}
-	}
+        a {
+            text-decoration: none;
+        }
+    }
 
-	.date {
-		margin-bottom: 10px;
-		padding: 10px;
-	}
+    .date {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
 
-	.session-title,
-	.speaker-company {
-		display: block;
-	}
-	.session-info {
-		a {
-			font-size: 18px;
-			font-family: $headings-b;
-			margin-bottom: 10px;
-		}
+    .session-title,
+    .speaker-company {
+        display: block;
+    }
+    .session-info {
+        a {
+            font-size: 18px;
+            font-family: $headings-b;
+            margin-bottom: 10px;
+        }
 
-	}
-	.speaker-company {
-		font-size: 12px;
-	}
+    }
+    .speaker-company {
+        font-size: 12px;
+    }
 
 }
 
 .venue {
-	margin-bottom: 60px;
-	position: relative;
+    margin-bottom: 60px;
+    position: relative;
 
-	#map-overlay {
-		background: $white;
-		width: 250px;
-		height: auto;
-		z-index: 5;
-		position: absolute;
-		top: 150px;
-		left: 10px;
+    #map-overlay {
+        background: $white;
+        width: 250px;
+        height: auto;
+        z-index: 5;
+        position: absolute;
+        top: 150px;
+        left: 10px;
 
-		@include bp(large-tablet) {
-			left: 100px;
-		}
+        @include bp(large-tablet) {
+            left: 100px;
+        }
 
 
-		h3 {
-			@include rem(font-size, 24px);
-			font-family: $headings-lt;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-			padding: 20px 20px 0 20px;
-		}
-		span,
-		a {
-			font-size: 13px;
-			padding: 0 0 0 20px;
-		}
+        h3 {
+            @include rem(font-size, 24px);
+            font-family: $headings-lt;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 20px 20px 0 20px;
+        }
+        span,
+        a {
+            font-size: 13px;
+            padding: 0 0 0 20px;
+        }
 
-		a {
-			font-size: 16px;
-			display: block;
-			background: $persian-green;
-			color: $white;
-			padding: 10px;
-			text-align: center;
-			text-decoration: none;
-			margin-top: 30px;
-			text-transform: uppercase;
-		}
-	}
+        a {
+            font-size: 16px;
+            display: block;
+            background: $persian-green;
+            color: $white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 30px;
+            text-transform: uppercase;
+        }
+    }
 }
 
 .btn {
-	width: 80%;
-	position: relative;
-	top: 40px;
-	left: 50%;
-	transform: translateX(-50%);
-	text-align: center;
+    width: 80%;
+    position: relative;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 
-	@include bp(large-tablet) {
-		width: 30%;
-	}
+    @include bp(large-tablet) {
+        width: 30%;
+    }
 }
 
 #page-header.sticky {
-	width: 100% !important;
-	left: 0;
+    width: 100% !important;
+    left: 0;
 
-	.secondary-header {
-		@include cf();
-		width: 900px;
-		max-width: 100%;
-		margin: 0 auto;
-	}
+    .secondary-header {
+        @include cf();
+        width: 900px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }

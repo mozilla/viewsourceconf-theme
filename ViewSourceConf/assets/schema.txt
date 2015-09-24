@@ -1,7 +1,7 @@
 <div itemscope itemtype="http://schema.org/Event">
    <a itemprop="url" href="www.viewsourceconf.org"><span itemprop="name">View Source Conference<span></a><div itemprop="description">Technology Conference</div>
-   <meta itemprop="startDate" content="2015-11-02T"> Starts: at 
-   <meta itemprop="endDate" content="2015-11-04T"><br>Ends:    
+   <meta itemprop="startDate" content="2015-11-02T"> Starts: at
+   <meta itemprop="endDate" content="2015-11-04T"><br>Ends:
 <br><br>
    <div itemprop="location" itemscope itemtype="http://schema.org/Place"><div itemprop="name">Gerding Theater at The Armory</div>
    <a itemprop="url" href="www.pcs.org/about-the-armory/">Gerding Theater at the Armory</a> <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Portland</span>, <span itemprop="addressRegion">OR</span></div></div>

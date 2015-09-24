@@ -11,7 +11,7 @@ var gulp            = require('gulp'),
     imagemin        = require('gulp-imagemin'),
     pngcrush        = require('imagemin-pngcrush'),
     browserSync     = require('browser-sync'),
-    reload		    = browserSync.reload;
+    reload          = browserSync.reload;
 
 gulp.task('browserSync', function() {
     var files = [
@@ -22,7 +22,7 @@ gulp.task('browserSync', function() {
         proxy: 'viewsource.dev/'
     });
 
-	browserSync.reload();
+    browserSync.reload();
 });
 
 // Compile Our Sass
