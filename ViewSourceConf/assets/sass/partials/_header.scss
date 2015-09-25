@@ -2,6 +2,7 @@
     .header-top {
         @include cf();
         z-index: 2;
+        padding: 20px 0;
     }
 
     .date,
@@ -18,10 +19,6 @@
         @include bp(large-tablet) {
             width: 243px;
             display: inline-block;
-            left: 0;
-            padding-top: 30px;
-            position: relative;
-            transform: none;
         }
         svg {
             path {
@@ -33,7 +30,6 @@
     .main-navigation {
         width: 70%;
         float: right;
-        padding: 40px 0 0;
     }
 
     .menu-toggle {
@@ -126,7 +122,6 @@
                 }
             }
         }
-
     }
 }
 

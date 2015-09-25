@@ -39,10 +39,11 @@ section {
 #page-header,
 #page-header-front-page {
     position: relative;
-    padding-bottom: 0;
+    padding: 20px 0 30px;
     background: $white;
     width: 100%;
     z-index: 100;
+    @include cf();
 
     .menu-toggle {
         margin-top: 20px;
@@ -51,13 +52,11 @@ section {
 }
 
 .page-header {
-
     .branding {
         width: 242px;
         height: auto;
         display: block;
         margin: 0 auto;
-        padding-bottom: 10px;
 
         @include bp(large-tablet) {
             display: inline-block;
@@ -69,8 +68,9 @@ section {
             }
         }
     }
-    nav {
-        margin-bottom: 60px;
+
+    hr {
+        bottom: -15px;
     }
 }
 
@@ -154,7 +154,7 @@ hr::before {
             float: left;
             display: inline-block;
             border: 3px solid $lt-grayish-yellow;
-            height: 190px;
+            height: 180px;
             position: relative;
             margin: 5px;
 
@@ -171,6 +171,8 @@ hr::before {
             a {
                 color: $black;
                 display: block;
+                width: 100%;
+                height: 100%;
                 text-decoration: none;
             }
 
@@ -282,6 +284,7 @@ hr::before {
     .fa {
         color: #00a7e0;
     }
+
     .left,
     .right {
         display: block;
@@ -293,6 +296,7 @@ hr::before {
             width: 48%;
         }
     }
+
     .left {
         margin-right: 2%;
 
@@ -305,8 +309,8 @@ hr::before {
             float: left;
         }
     }
-    .right {
 
+    .right {
         @include bp(large-tablet) {
             float: right;
         }
@@ -316,6 +320,7 @@ hr::before {
 .schedule.schedule-front {
     margin-bottom: 30px;
     @include cf();
+
     ul.header {
         font-family: $headings-lt;
         text-transform: uppercase;
